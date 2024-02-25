@@ -1,0 +1,15 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap-icons/font/bootstrap-icons.css';
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    text-decoration: none !important;
+    color: #1877F2 !important;
+}
