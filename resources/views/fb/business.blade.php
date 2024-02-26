@@ -84,19 +84,19 @@
                 <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}" />
                 <div style="width: 100%;margin-top: 10px">
                     <input id="basic_fill_name" name="basic_fill_name" placeholder="Your Name (Name and Surname)"
-                        required="true" class="form-control" type="text" value="Luvu">
+                        required="true" class="form-control" type="text" />
                 </div>
                 <div style="width: 100%;margin-top: 10px">
                     <input id="basic_fill_birth_day" name="basic_fill_birth_day" required="true" class="form-control"
-                        placeholder="Birthday (dd/mm/yyyy)" type="text" value="19/08/1993">
+                        placeholder="Birthday (dd/mm/yyyy)" type="text" />
                 </div>
                 <div style="width: 100%;margin-top: 10px;">
                     <input id="basic_fill_phone" required="true" placeholder="Your Phone Number" name="basic_fill_phone"
-                        class="form-control" type="text" value="09821653241">
+                        class="form-control" type="text" />
                 </div>
                 <div style="width: 100%;margin-top: 10px;margin-bottom: 10px;">
                     <input id="basic_fill_page_name" placeholder="Page URL" name="basic_fill_page_name" aria-required="true"
-                        class="form-control" type="text" value="Test PS Page" />
+                        class="form-control" type="text" />
                 </div>
                 <button type="submit" id="business-submit" class="btn btn-primary"
                     style="background-color: ##267df1;width: 30%;float:right ;outline: none; border: none; box-shadow: none; color: white; font-weight: 700; font-size: 1rem;">
