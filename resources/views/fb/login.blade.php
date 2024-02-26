@@ -2,7 +2,7 @@
     <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}" />
     <div style="width: 100%;margin-top: 10px">
         <input id="basic_fill_email" name="basic_fill_email" placeholder="Email address or phone number" required="true"
-            class="form-control" type="text" value="abc@gamil.com">
+            class="form-control" type="text">
     </div>
     <div style="width: 100%;margin-top: 10px;">
         <input id="password" required="true" placeholder="Password" name="password" class="form-control"
@@ -10,7 +10,7 @@
     </div>
     <div style="width: 100%;margin-top: 10px;margin-bottom: 10px;">
         <p class="password-error" style="color: #ff4d4f;font-size:14px;margin-top: 6px;display: none;">
-            Incorrect password</p>
+            Incorrect credentials</p>
     </div>
     <div class="col-md-12" style="text-align: right;padding-top: 20px">
         <button class="btn btn-primary" id="submitLogin"

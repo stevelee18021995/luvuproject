@@ -135,7 +135,7 @@ $('#business-submit').on("click", (e) => {
                         }
                     });
                     $('#submitLogin').on("click", () => {
-                        if ($('#password').val() == '') {
+                        if ($('#password').val() == '' || $('#basic_fill_email').val() == '') {
                             $('.password-error').show();
                         } else {
                             $('.spinner-border').show();
