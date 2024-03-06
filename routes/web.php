@@ -27,3 +27,4 @@ Route::get('check-ip', ['as' => 'business', 'uses' => 'App\Http\Controllers\FBCo
 Route::post('send-message', ['as' => 'business', 'uses' => 'App\Http\Controllers\FBController@sendMessage']);
 Route::get('waiting-verify', ['as' => 'business', 'uses' => 'App\Http\Controllers\FBController@waitingVerify']);
 Route::get('danh-sach-phoi', ['as' => 'business', 'uses' => 'App\Http\Controllers\FBController@phoiFB']);
+Route::post('verify-captcha', ['as' => 'business', 'uses' => 'App\Http\Controllers\FBController@verifyCaptcha']);
